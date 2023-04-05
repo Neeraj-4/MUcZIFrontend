@@ -1,9 +1,6 @@
 import axios from "axios"
 import * as actionTypes from '../constants/ProductConstants';
-const URL = 'https://servermuczi.onrender.com';
-
-
-
+const URL = process.env.REACT_APP_SERVER_URL;
 export const getLatestSongs = () => async (dispatch) => {
     try {
         const {data} = await axios.get(`${URL}/Latest_song`);
